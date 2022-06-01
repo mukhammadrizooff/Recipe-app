@@ -74,3 +74,14 @@ group :test do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails', "~> 4.3"
+gem "sassc-rails", '>= 2.1.0'
+
+gem 'devise'
+gem 'cancancan'
+
+#  paginate
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
