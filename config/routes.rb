@@ -3,7 +3,20 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "pages#home"
+  devise_for :users
+  
+  devise_scope  :user do
+    get 'users/sign_out' => 'devise/sessions#destroy'
+  end
 
-  resources :users, only: [:create, :new, :show, :index]
+  root "public_recipes#index"
+
+  resources :recipes, only: [:index]
+  resources :users do 
+    resources :recipes, except: [:update, :edit]
+  end
+
+  resources :public_recipes, only: [:index]
+  resources :shopping_list, only: [:index]
+
 end
