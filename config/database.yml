@@ -15,6 +15,8 @@
 # gem "pg"
 #
 default: &default
+  # username: postgres
+  # password: 777KData
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
@@ -32,7 +34,7 @@ development:
   #username: recipe_app
 
   # The password associated with the postgres role (username).
-  #password:
+  # password: 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
