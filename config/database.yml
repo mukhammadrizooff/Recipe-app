@@ -15,6 +15,8 @@
 # gem "pg"
 #
 default: &default
+  # username: postgres
+  # password: 777KData
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
@@ -24,9 +26,6 @@ default: &default
 development:
   <<: *default
   database: recipe_app_development
-  host: 127.0.0.1
-  username: postgres
-  password: mms070707
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -35,7 +34,7 @@ development:
   #username: recipe_app
 
   # The password associated with the postgres role (username).
-  #password:
+  # password: 
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -61,9 +60,6 @@ development:
 test:
   <<: *default
   database: recipe_app_test
-  host: 127.0.0.1
-  username: postgres
-  password: mms070707
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
