@@ -11,9 +11,12 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %> 
+    <%= render 'layouts/navbar' %>
     <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> 
+    <p class="alert"><%= alert %></p>
+      <% if flash.any? %>
+        <%= render 'layouts/messages' %>
+      <% end %>
     <%= yield %>
   </body>
 </html>
